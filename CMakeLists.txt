@@ -8,13 +8,11 @@ project(salut_cpp)
 include_directories(${CMAKE_SOURCE_DIR})
 
 
-set(SRCS
-    "Salut/Sort/BucketSort.cpp"
-)
+set(SRCS)
 
 
-add_library(salutcpp ${SRCS})
+# add_library(salutcpp ${SRCS})
 
 add_executable(test main.cpp)
 
-target_link_libraries(test salutcpp)
+# target_link_libraries(test salutcpp)
