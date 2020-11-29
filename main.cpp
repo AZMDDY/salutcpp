@@ -7,13 +7,13 @@ using namespace salut;
 
 int main(int argc, char** argv)
 {
-    vector<int> arr = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
-    sort::BucketSort<int>(arr, 5, [](int a) { return 4 - a / 2; });
-    for (auto& a : arr) {
-        std::cout << a << ",";
-    }
+    vector<int32_t> arr = {92, 803, 7, 43, -578, 4, 3, -2, -11111, 0};
+//    sort::BucketSort<int>(arr, 5, [](int a) { return 4 - a / 2; });
+//    for (auto& a : arr) {
+//        std::cout << a << ",";
+//    }
     std::cout << std::endl;
-    sort::RadixSort<int>(arr);
+    sort::RadixSort<int32_t>(arr);
     for (auto& a : arr) {
         std::cout << a << ",";
     }
