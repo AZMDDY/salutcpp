@@ -3,6 +3,7 @@
 #include <vector>
 #include <array>
 #include <algorithm>
+
 namespace salut {
     namespace sort {
         template<class T>
