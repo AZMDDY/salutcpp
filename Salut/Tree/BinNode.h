@@ -34,7 +34,7 @@ namespace tree {
         }
 
         // 作为当前节点的左子节点插入新节点
-        BinNode<T>* InstallAsLChild(const T& v)
+        BinNode<T>* InsertAsLChild(const T& v)
         {
             if (lChild != nullptr) {
                 return nullptr;
@@ -44,7 +44,7 @@ namespace tree {
         }
 
         // 作为当前节点的右子节点插入新节点
-        BinNode<T>* InstallAsRChild(const T& v)
+        BinNode<T>* InsertAsRChild(const T& v)
         {
             if (rChild != nullptr) {
                 return nullptr;
@@ -92,7 +92,7 @@ namespace tree {
     {
         return node.rChild != nullptr;
     }
-    
+
     template<class T>
     bool HasChild(const BinNode<T>& node)
     {

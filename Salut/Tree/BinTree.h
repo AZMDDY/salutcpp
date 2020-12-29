@@ -7,6 +7,20 @@ namespace tree {
     template<class T>
     class BinTree {
     public:
+        BinTree() : root(nullptr) {}
+
+        ~BinTree()
+        {
+            if (root != nullptr) {
+                root->RelaseChilds();
+                root = nullptr;
+            }
+        }
+
+        bool Empty() { return root == nullptr; }
+
+        
+
     private:
         BinNode<T>* root;
     };
