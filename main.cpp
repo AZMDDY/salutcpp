@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Salut/Sort/BucketSort.h"
 #include "Salut/Sort/RadixSort.h"
+#include "Salut/Tree/BinTree.h"
+
 using namespace std;
 
 using namespace salut;
@@ -17,5 +19,9 @@ int main(int argc, char** argv)
     for (auto& a : arr) {
         std::cout << a << ",";
     }
+
+    tree::BinTree<int> t;
+    t.InsertAsRoot(20);
+
     return 0;
 }

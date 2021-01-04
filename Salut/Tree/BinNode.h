@@ -22,12 +22,12 @@ namespace tree {
         void RelaseChilds()
         {
             if (lChild != nullptr) {
-                lChild->Relase();
+                lChild->RelaseChilds();
                 delete lChild;
                 lChild = nullptr;
             }
             if (rChild != nullptr) {
-                rChild->Relase();
+                rChild->RelaseChilds();
                 delete rChild;
                 rChild = nullptr;
             }
