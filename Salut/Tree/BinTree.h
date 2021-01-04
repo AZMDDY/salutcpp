@@ -2,6 +2,7 @@
 #define SALUT_TREE_BIN_TREE_H_
 
 #include <stack>
+#include <queue>
 
 #include "BinNode.h"
 
@@ -167,6 +168,28 @@ namespace tree {
                 }
             }
             std::reverse(ans.begin(), ans.end());
+            return ans;
+        }
+
+        std::vector<T> LevelTraversal(BinNode<T>* node)
+        {
+            std::vector<T> ans;
+            std::queue<BinNode<T>*> que;
+            if (node == nullptr) {
+                return ans;
+            }
+            que.push(node);
+            while (!que.empty()) {
+                BinNode<T>* tmpNode = que.front();
+                que.pop();
+                ans.push_back(tmpNode->val);
+                if (tmpNode->lChild != nullptr) {
+                    que.push(tmpNode->lChild);
+                }
+                if (tmpNode->rChild != nullptr) {
+                    que.push(tmpNode->rChild);
+                }
+            }
             return ans;
         }
 
